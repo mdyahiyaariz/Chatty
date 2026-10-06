@@ -1,0 +1,26 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Public+Sans:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+@theme {
+  --font-display: 'Fraunces', ui-serif, Georgia, serif;
+  --font-sans: 'Public Sans', ui-sans-serif, system-ui, sans-serif;
+
+  --color-ink: #14181f;
+  --color-ink-soft: #1f2530;
+  --color-ink-line: #2b3240;
+
+  --color-paper: #faf7f1;
+  --color-paper-dim: #f1ece0;
+  --color-paper-line: #e7e1d2;
+
+  --color-teal: #2f6f5e;
+  --color-teal-dark: #244f43;
+  --color-teal-soft: #dcece5;
+
+  --color-gold: #c2933f;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-paper);
+}

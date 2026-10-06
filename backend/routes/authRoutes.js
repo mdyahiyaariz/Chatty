@@ -1,0 +1,13 @@
+import express from "express";
+import AuthController from "../controllers/authController.js";
+import authMiddleware from "../middlewares/authMiddleware.js"
+
+const router = express.Router();
+
+router.post("/register", AuthController.register);
+router.post("/login", AuthController.login);
+router.post("/logout", AuthController.logout);
+router.get("/me", authMiddleware, AuthController.me);
+router.patch("/profile", authMiddleware, AuthController.updateProfile);
+
+export default router;
