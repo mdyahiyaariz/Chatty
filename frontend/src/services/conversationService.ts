@@ -37,7 +37,7 @@ export const conversationService = {
         return response.data;
     },
     removeMember: async (conversationId: string, userId: string) => {
-        const response = await apiClient.delete(`/conversations/${conversationId}/members/${userId}`);
+        const response = await apiClient.delete(`/api/conversations/${conversationId}/members/${userId}`);
         return response.data;
     }
 }
