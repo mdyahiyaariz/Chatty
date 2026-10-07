@@ -36,7 +36,7 @@ interface MessagesResponse {
 
 export const messageService = {
     fetchMessages: async (conversationId: string, cursor?: string): Promise<MessagesResponse> => {
-        const result = await apiClient.get(`/conversations/${conversationId}/messages`, {
+        const result = await apiClient.get(`/api/conversations/${conversationId}/messages`, {
             params: {
                 cursor,
             }
