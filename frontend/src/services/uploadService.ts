@@ -14,7 +14,7 @@ export const uploadService = {
         const formData = new FormData();
         formData.append("file", file, filename);
 
-        const response = await apiClient.post("/upload", formData, {
+        const response = await apiClient.post("/api/upload", formData, {
             headers: { "Content-Type": "multipart/form-data" },
         });
         return response.data;
@@ -25,7 +25,7 @@ export const uploadService = {
         const formData = new FormData();
         formData.append("file", file);
 
-        const response = await apiClient.post("/upload/avatar", formData, {
+        const response = await apiClient.post("/api/upload/avatar", formData, {
             headers: { "Content-Type": "multipart/form-data" },
         });
         return response.data.url;
